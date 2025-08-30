@@ -1,0 +1,23 @@
+# Виртуальная среда
+.venv/
+venv/
+env/
+
+# База данных
+db.sqlite3
+
+# PyCharm
+.idea/
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Логи
+*.log
+
+# Операционная система
+.DS_Store
+Thumbs.db
