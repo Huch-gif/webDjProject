@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Характер — Малинуа{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h2>Характер Малинуа</h2>
+  <p>
+    Малинуа — это собака с ярко выраженным рабочим темпераментом. Она энергична, 
+    активна, легко обучается и обладает высокой концентрацией.
+  </p>
+  <p>
+    Порода требует постоянной умственной и физической нагрузки. Без тренировок 
+    может стать разрушительной или тревожной.
+  </p>
+  <ul class="list-group my-4" style="max-width: 500px;">
+    <li class="list-group-item">✅ Ум и сообразительность</li>
+    <li class="list-group-item">✅ Преданность хозяину</li>
+    <li class="list-group-item">✅ Высокая работоспособность</li>
+    <li class="list-group-item">✅ Бдительность и охрана</li>
+    <li class="list-group-item">⚠️ Требует опытного владельца</li>
+  </ul>
+  <img src="{% static 'images/malinois_temperament.jpg' %}" alt="Малинуа — характер" class="img-fluid rounded mb-4" style="max-width: 600px;">
+</div>
+{% endblock %}

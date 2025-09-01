@@ -1,28 +1,15 @@
-from django.http import HttpResponse
-
+from django.shortcuts import render
 
 def home(request):
-    """
-    Главная страница
-    """
-    return HttpResponse("<h1>Главная страница</h1><p>Добро пожаловать на сайт!</p>")
+    return render(request, 'home.html')
+
+def breed(request):
+    return render(request, 'breed.html')
+
+def temperament(request):
+    return render(request, 'temperament.html')
+
+def care(request):
+    return render(request, 'care.html')
 
 
-def data(request):
-    """
-    Страница /data/
-    """
-    return HttpResponse("""
-        <h1>Содержимое страницы data</h1>
-        <p>Это страница с данными.</p>
-    """)
-
-
-def test(request):
-    """
-    Страница /test/
-    """
-    return HttpResponse("""
-        <h1>Содержимое страницы test</h1>
-        <p>Это тестовая страница.</p>
-    """)

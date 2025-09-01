@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Уход и тренировки — Малинуа{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h2>Уход и тренировки</h2>
+  <p>
+    Малинуа не требует сложного ухода за шерстью — достаточно расчёсывать 1–2 раза в неделю. 
+    Но основная нагрузка — в тренировках.
+  </p>
+  <h4>Что нужно:</h4>
+  <ul>
+    <li><strong>Ежедневные прогулки</strong> — минимум 2 часа</li>
+    <li><strong>Аджилити, зиппо, фризби</strong> — для умственной нагрузки</li>
+    <li><strong>Обучение командам</strong> — базовые и сложные</li>
+    <li><strong>Социализация</strong> — с людьми и другими животными</li>
+  </ul>
+  <img src="{% static 'images/malinois_care.jpg' %}" alt="Малинуа — уход и тренировки" class="img-fluid rounded mb-4" style="max-width: 600px;">
+</div>
+{% endblock %}

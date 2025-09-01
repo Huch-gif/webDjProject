@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Главная — Малинуа{% endblock %}
+
+{% block content %}
+<style>
+  body {
+    background-image: url('{% static "images/background.jpg" %}');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; /* если фон тёмный — текст станет белым */
+  }
+  /* Улучшаем читаемость */
+  .text-center, .lead, h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+</style>
+
+<div class="text-center my-5">
+  <img src="{% static 'images/malinois.jpg' %}"
+       alt="Малинуа" class="img-fluid rounded mb-4" style="max-width: 600px;">
+  <h1>Бельгийская овчарка Малинуа</h1>
+  <p class="lead">Сильная, умная, преданная — одна из самых уважаемых служебных пород в мире.</p>
+</div>
+{% endblock %}
