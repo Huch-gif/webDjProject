@@ -3,5 +3,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')),  # подключаем маршруты из приложения pages
+    path('', include('pages.urls')),
+    path('news/', include('news.urls')),
 ]

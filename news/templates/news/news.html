@@ -1,0 +1,30 @@
+<!-- news/templates/news_home.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости о Малинуа</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        article { margin-bottom: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 8px; }
+        h2 { color: #0066cc; margin: 0; }
+        h2 a { text-decoration: none; color: inherit; }
+        h2 a:hover { text-decoration: underline; }
+        .date { color: #666; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Новости о породе Малинуа</h1>
+
+    {% for post in news_list %}
+        <article>
+            <h2><a href="{% url 'news_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+            <p class="date">Опубликовано: {{ post.pub_date|date:"d.m.Y H:i" }}</p>
+            <p><strong>{{ post.short_description }}</strong></p>
+            <p><small>Автор: {{ post.author.username }}</small></p>
+        </article>
+    {% empty %}
+        <p>Новостей пока нет.</p>
+    {% endfor %}
+</body>
+</html>

@@ -12,4 +12,3 @@ def temperament(request):
 def care(request):
     return render(request, 'care.html')
 
-
