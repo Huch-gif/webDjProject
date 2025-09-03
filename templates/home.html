@@ -1,28 +1,28 @@
+<!-- templates/home.html -->
 {% extends 'base.html' %}
 {% load static %}
 
 {% block title %}Главная — Малинуа{% endblock %}
 
 {% block content %}
-<style>
-  body {
-    background-image: url('{% static "images/background.jpg" %}');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; /* если фон тёмный — текст станет белым */
-  }
-  /* Улучшаем читаемость */
-  .text-center, .lead, h1 {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  }
-</style>
+<div class="container">
+  <h1>Добро пожаловать на сайт Малинуа!</h1>
+  <p><strong>Малинуа</strong> — это одна из самых уважаемых служебных пород в мире. Здесь вы найдёте полезные статьи, руководства и новости о жизни этих преданных и смелых собак.</p>
 
-<div class="text-center my-5">
-  <img src="{% static 'images/malinois.jpg' %}"
-       alt="Малинуа" class="img-fluid rounded mb-4" style="max-width: 600px;">
-  <h1>Бельгийская овчарка Малинуа</h1>
-  <p class="lead">Сильная, умная, преданная — одна из самых уважаемых служебных пород в мире.</p>
+  <h3>Наши ключевые разделы:</h3>
+  <ul>
+    <li><strong>Блог:</strong> Актуальные статьи и новости из мира малинуа и служебных собак.</li>
+    <li><strong>Руководства:</strong> Пошаговые инструкции по содержанию и обучению малинуа.</li>
+    <li><strong>Присоединяйтесь к нашему сообществу:</strong></li>
+    <ul>
+      <li>Обсуждайте проекты на форуме.</li>
+      <li>Делитесь своими успехами и задавайте вопросы.</li>
+      <li>Участвуйте в ежемесячных конкурсах и выигрывайте призы.</li>
+    </ul>
+  </ul>
+
+  <p><strong>Малинуа стремится создать дружелюбную и поддерживающую среду для всех участников. Мы верим, что совместное обучение и обмен опытом помогают достигать больших успехов.</strong></p>
+
+  <p><strong>Следите за обновлениями и подписывайтесь на нашу рассылку, чтобы быть в курсе всех новостей и событий.</strong></p>
 </div>
 {% endblock %}

@@ -1,16 +1,12 @@
+<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Малинуа — Бельгийская овчарка{% endblock %}</title>
-
+  <title>{% block title %}Малинуа{% endblock %}</title>
   {% load static %}
-
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Фон страницы -->
   <style>
     body {
       background-color: #f0f4f8;
@@ -19,26 +15,50 @@
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      margin: 0;
-      min-height: 100vh;
+    }
+    .sidebar {
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-  <!-- Подключаем меню -->
-  {% include 'menu.html' %}
+  <!-- Боковое меню -->
+  <div class="sidebar">
+    <img src="{% static 'images/malinois.jpg' %}" alt="Малинуа" class="logo">
+    <h6>Малинуа</h6>
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
+      <li class="nav-item"><a href="/breed" class="nav-link">О породе</a></li>
+      <li class="nav-item"><a href="/temperament" class="nav-link">Характер</a></li>
+      <li class="nav-item"><a href="/care" class="nav-link">Уход и тренировки</a></li>
+      <li class="nav-item"><a href="/news/" class="nav-link">Новости</a></li>
+      <li class="nav-item"><a href="{% url 'news_create' %}" class="nav-link">➕ Добавить новость</a></li>
+    </ul>
+  </div>
 
-  <!-- Основное содержимое страницы -->
-  <div class="container mt-4">
+  <!-- Основной контент -->
+  <div class="content">
     {% block content %}
-      <!-- Сюда вставляется контент из home.html, breed.html и др. -->
     {% endblock %}
   </div>
 
-  <!-- Подключаем подвал -->
-  {% include 'footer.html' %}
-
-  <!-- Bootstrap JS Bundle (с Popper) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
